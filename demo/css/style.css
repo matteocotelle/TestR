@@ -1,0 +1,277 @@
+
+/* LOGO COLOR
+dark grey #232323
+grey #5E5E5E
+light grey #C0C0C0
+yellow #F7BA44 
+*/
+
+.loader_bg{
+  position: fixed;
+  z-index: 999999;
+  background: #232328;
+  width: 100%;
+  height: 100%;
+}
+.loader{
+  border: 0 soild transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: calc(50vh - 75px);
+  left: calc(50vw - 75px);
+}
+.loader:before, .loader:after{
+  content: '';
+  border: 1em solid #F7BA44;
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loader 2s linear infinite;
+  opacity: 0;
+}
+.loader:before{
+  animation-delay: 0.5s;
+}
+
+@keyframes loader{
+  0%{
+      transform: scale(0);
+      opacity: 0;
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      transform: scale(1);
+      opacity: 0;
+  }
+}
+
+
+
+body { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+  font: normal 75% Arial, Helvetica, sans-serif; 
+  background-color: #232328;
+}
+  
+header {
+  position: fixed;
+  width: 100%;
+  height: 150px;
+  background: rgba(0, 0, 0, 0);
+}
+
+nav {
+  padding-top: 10px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+ul li {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  margin: 0px 30px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  bottom: -8px;
+  background-color: #292929;
+  transition: 0.5s ease;
+}
+
+ul li:hover::before {
+  width: 100%;
+}
+
+nav .logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  transition: 1s ease-in-out;
+}
+
+nav .logo:hover {
+  transform: scale(105%);
+}
+
+/* ---- particles.js container ---- */
+#particles-js { 
+  width: 100%; height: 100vh; 
+  background-color: #242428; 
+  background-image: url("https://web.archive.org/web/20180804221351im_/http://veda-defense.com/img/logo.png"); 
+  background-repeat: no-repeat; 
+  background-size: 10%; 
+  background-position: 50% 50%; 
+}
+
+.main-title {
+  position: relative;
+  color: white;
+  padding-right: 80px;
+  padding-left: 80px;
+}
+
+.tiles {
+  width: 100%;
+  height: 100vh;
+  background: #f1f1f1;
+}
+
+.carousel-part {
+  color: #f1f1f1;
+  background: #232328;
+}
+
+.main-content {
+  color: #f1f1f1;
+  background: #232328;
+  padding: 3vw 5vw 5vw;
+}
+
+.slideshow-container {
+  margin-top: 4vw;
+  overflow: hidden;
+  min-height: 60vmin;
+  cursor: grab;
+  position: relative;
+}
+.slideshow-container:active {
+  cursor: grabbing;
+}
+.slideshow {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  pointer-events: none;
+}
+.slide {
+  flex-shrink: 0;
+  height: 100%;
+  width: 80vmin;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.slide:not(:nth-child(1)){
+  margin-left: 10px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+.slide h2, .slide a {
+  text-shadow: 0 0 5px rgba(0,0,0,0.39);
+}
+.slide h2 {
+  position: absolute;
+  top: clamp(10px, 2vw, 20px);
+  left: clamp(10px, 2vw, 20px);
+  font-size: clamp(20px, 3vw, 40px);
+  font-weight: 300;
+}
+.slide a {
+  position: absolute;
+  bottom: clamp(10px, 2vw, 20px);
+  right: clamp(10px, 2vw, 20px);
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: 300;
+  color: #fff;
+  pointer-events: auto;
+}
+
+
+.s1 {
+  background-image: url("https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80");
+}
+
+.s2 {
+  background-image: url("https://images.unsplash.com/photo-1609766857326-18a204c2cf31?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+}
+.s3 {
+  background-image: url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1054&q=80");
+}
+.s4 {
+  background-image: url("https://images.unsplash.com/photo-1566908829550-e6551b00979b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80");
+}
+.s5 {
+  background-image: url("https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80");
+}
+
+.team {
+  width: 100%;
+  height: 100vh;
+  background: #f1f1f1;
+  color: #232328;
+}
+
+
+.img-container {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ -webkit-user-select: none; /* Chrome, Safari, Opéra */
+ -ms-user-select: none; /* Internet explorer, Edge */
+ user-select: none; /* Propriété standard */
+}
+
+.team-photo {
+  width: 50%; height: 50%;
+}
+
+.team-photo :hover {
+  background: linear-gradient(0deg, rgba(0,0,0,1) 1%, rgba(105,52,52,0) 46%);
+}
+
+
+
+
+
+
+/* footer container */
+footer {
+  width: 100%;
+  background: rgb(95, 95, 95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright-text {
+    color:0;
+}
+
+
